@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/nav_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@drawable/ic_baseline_arrow_back_black"/>
+
+        <TextView
+            android:id="@+id/tv_title_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/font_24"
+            android:text="@string/comic"
+            android:textColor="@color/dark_blue"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/page_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_wrapper"
+        >
+
+        <LinearLayout
+            android:id="@+id/info_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_comicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_20"
+                android:layout_marginStart="@dimen/margin_30"
+                />
+
+            <TextView
+                android:id="@+id/tv_comicDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_12"
+                android:layout_marginStart="@dimen/margin_30"
+                />
+
+        </LinearLayout>
+
+        <com.example.timekiller.view.comic.TouchImageView
+            android:id="@+id/iv_comic_main"
+            android:layout_below="@id/info_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/iv_fav"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/padding_5"
+            android:layout_width="@dimen/scale_30"
+            android:layout_height="@dimen/scale_30"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:src="@drawable/ic_fav"
+            />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        />
+
+</RelativeLayout>

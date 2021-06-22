@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:src="@drawable/ic_baseline_arrow_back_black"/>
+
+    <TextView
+        android:id="@+id/tv_title_advice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/font_24"
+        android:text="@string/adviceEntity"
+        android:textColor="@color/dark_blue"/>
+
+    <TextView
+        android:id="@+id/tv_advice_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="@dimen/margin_30"
+        android:textSize="@dimen/font_24"
+        android:textStyle="italic"
+        android:gravity="center_horizontal"
+        />
+
+    <ImageView
+        android:id="@+id/iv_fav"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/padding_5"
+        android:layout_width="@dimen/scale_30"
+        android:layout_height="@dimen/scale_30"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_below="@id/tv_title_advice"
+        android:src="@drawable/ic_fav_border"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_advice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/get_more_advice"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_radius"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:src="@drawable/ic_baseline_arrow_back_black"/>
+
+    <TextView
+        android:id="@+id/tv_title_joke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/font_24"
+        android:text="@string/joke"
+        android:textColor="@color/dark_blue"/>
+
+    <ImageView
+        android:id="@+id/iv_joke_logo"
+        android:layout_width="@dimen/scale_120"
+        android:layout_height="@dimen/scale_120"
+        android:layout_below="@id/tv_title_joke"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_100"
+        android:src="@drawable/ic_joke"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_category_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_joke"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:text="@string/category_label"/>
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_joke"
+        android:layout_toEndOf="@+id/tv_category_label"
+        android:background="@color/yellow"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:paddingHorizontal="@dimen/padding_5"
+        android:paddingTop="@dimen/padding_3"/>
+
+    <LinearLayout
+        android:id="@+id/ll_joke"
+        android:layout_below="@id/iv_joke_logo"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        >
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:expansion_headerIndicator="@id/headerIndicator"
+            app:expansion_layout="@id/expansionLayout"
+            app:expansion_toggleOnClick="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- HEADER -->
+                <TextView
+                    android:id="@+id/tv_joke_setup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/headerIndicator"
+                    android:textSize="@dimen/font_18"/>
+
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:id="@+id/headerIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="16dp"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+            </RelativeLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <!-- CONTENT -->
+            <TextView
+                android:id="@+id/tv_joke_punchline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_18"/>
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_joke_2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/font_18"
+        android:layout_below="@id/ll_joke"
+        android:layout_marginHorizontal="@dimen/margin_10"/>
+
+    <Button
+        android:id="@+id/btn_joke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_radius"
+        android:layout_alignParentBottom="true"
+        android:text="@string/get_more_joke"/>
+
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_half_yellow">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_home_title"
+            android:layout_width="@dimen/scale_240"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:fontFamily="@font/poppins_bold"
+            android:letterSpacing="0.1"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_32"/>
+
+        <GridLayout
+            android:layout_width="@dimen/scale_360"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_home_title"
+            android:rowCount="2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/margin_30">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_comic"
+                android:layout_width="@dimen/scale_180"
+                android:layout_height="@dimen/scale_180"
+                android:layout_row="0"
+                android:layout_column="0"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/scale_12"
+                app:cardElevation="@dimen/scale_4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/scale_72"
+                        android:layout_height="@dimen/scale_72"
+                        android:src="@drawable/ic_comic"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/comic"
+                        android:textSize="@dimen/font_16"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_joke"
+                android:layout_width="@dimen/scale_180"
+                android:layout_height="@dimen/scale_180"
+                android:layout_row="0"
+                android:layout_column="1"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/scale_12"
+                app:cardElevation="@dimen/scale_4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/scale_72"
+                        android:layout_height="@dimen/scale_72"
+                        android:src="@drawable/ic_joke"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joke"
+                        android:textSize="@dimen/font_16"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_quiz"
+                android:layout_width="@dimen/scale_180"
+                android:layout_height="@dimen/scale_180"
+                android:layout_row="1"
+                android:layout_column="0"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/scale_12"
+                app:cardElevation="@dimen/scale_4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/scale_72"
+                        android:layout_height="@dimen/scale_72"
+                        android:src="@drawable/ic_quiz"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quiz"
+                        android:textSize="@dimen/font_16"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_advice"
+                android:layout_width="@dimen/scale_180"
+                android:layout_height="@dimen/scale_180"
+                android:layout_row="1"
+                android:layout_column="1"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/scale_12"
+                app:cardElevation="@dimen/scale_4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/scale_72"
+                        android:layout_height="@dimen/scale_72"
+                        android:src="@drawable/ic_advice"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adviceEntity"
+                        android:textSize="@dimen/font_16"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/font_12"
+        android:text="@string/copyright"/>
+
+</RelativeLayout>

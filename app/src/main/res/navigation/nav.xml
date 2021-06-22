@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <!--HOME-->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.timekiller.view.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/home_to_adviceHome"
+            app:destination="@id/adviceHomeFragment" />
+        <action
+            android:id="@+id/home_to_quizHome"
+            app:destination="@id/quiz_nav" />
+        <action
+            android:id="@+id/home_to_jokeHome"
+            app:destination="@id/jokeHomeFragment" />
+        <action
+            android:id="@+id/home_to_comicHome"
+            app:destination="@id/comic_nav" />
+    </fragment>
+
+
+    <!--ADVICE-->
+    <fragment
+        android:id="@+id/adviceHomeFragment"
+        android:name="com.example.timekiller.view.advice.AdviceHomeFragment"
+        android:label="AdviceFragment" >
+        <action
+            android:id="@+id/adviceHome_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/adviceHome_to_adviceRandom"
+            app:destination="@id/adviceRandomFragment" />
+        <action
+            android:id="@+id/adviceHome_to_adviceFavorite"
+            app:destination="@id/adviceFavoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adviceRandomFragment"
+        android:name="com.example.timekiller.view.advice.AdviceRandomFragment"
+        android:label="AdviceRandomFragment" >
+        <action
+            android:id="@+id/adviceRandom_to_adviceHome"
+            app:destination="@id/adviceHomeFragment"
+            app:popUpTo="@id/adviceHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/adviceFavoriteFragment"
+        android:name="com.example.timekiller.view.advice.AdviceFavoriteFragment"
+        android:label="AdviceFavoriteFragment" >
+        <action
+            android:id="@+id/adviceFavorite_to_adviceHome"
+            app:destination="@id/adviceHomeFragment" />
+    </fragment>
+
+
+    <!--COMIC-->
+
+    <fragment
+        android:id="@+id/adviceFavoriteFragment"
+        android:name="com.example.timekiller.view.advice.AdviceFavoriteFragment"
+        android:label="AdviceFavoriteFragment" >
+        <action
+            android:id="@+id/adviceFavorite_to_adviceHome"
+            app:destination="@id/adviceHomeFragment"
+            app:popUpTo="@id/adviceHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--QUIZ-->
+
+
+    <!--JOKE-->
+    <fragment
+        android:id="@+id/jokeHomeFragment"
+        android:name="com.example.timekiller.view.joke.JokeHomeFragment"
+        android:label="JokeHomeFragment" >
+        <action
+            android:id="@+id/jokeHome_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/jokeHome_to_jokeMain"
+            app:destination="@id/jokeMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokeMainFragment"
+        android:name="com.example.timekiller.view.joke.JokeMainFragment"
+        android:label="JokeMainFragment" >
+        <action
+            android:id="@+id/jokeMain_to_jokeHome"
+            app:destination="@id/jokeHomeFragment"
+            app:popUpTo="@id/jokeHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation android:id="@+id/quiz_nav"
+        app:startDestination="@id/quizHomeFragment">
+        <fragment
+            android:id="@+id/quizHomeFragment"
+            android:name="com.example.timekiller.view.quiz.QuizHomeFragment"
+            android:label="QuizHomeFragment">
+            <action
+                android:id="@+id/quizHome_to_home"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/homeFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/quizHome_to_quizDifficulty"
+                app:destination="@id/quizDifficultyFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/quizDifficultyFragment"
+            android:name="com.example.timekiller.view.quiz.QuizDifficultyFragment"
+            android:label="QuizDifficultyFragment">
+            <action
+                android:id="@+id/quizDifficulty_to_quizQuestion"
+                app:destination="@id/quizQuestionFragment" />
+            <action
+                android:id="@+id/quizDifficulty_to_quizHome"
+                app:destination="@id/quizHomeFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/quizQuestionFragment"
+            android:name="com.example.timekiller.view.quiz.QuizQuestionFragment"
+            android:label="QuizQuestionFragment">
+            <action
+                android:id="@+id/quizQuestion_to_quizEnd"
+                app:destination="@id/quizEndFragment" />
+            <action
+                android:id="@+id/quizQuestion_to_quizDifficulty"
+                app:destination="@id/quizDifficultyFragment"
+                app:popUpTo="@id/quizDifficultyFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/quizEndFragment"
+            android:name="com.example.timekiller.view.quiz.QuizEndFragment"
+            android:label="QuizEndFragment">
+            <action
+                android:id="@+id/quizEnd_to_home"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/homeFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/quizEnd_to_quizDifficulty"
+                app:destination="@id/quizDifficultyFragment" />
+        </fragment>
+    </navigation>
+    <navigation android:id="@+id/comic_nav"
+        app:startDestination="@id/comicHomeFragment">
+        <fragment
+            android:id="@+id/comicRandomFragment"
+            android:name="com.example.timekiller.view.comic.ComicRandomFragment"
+            android:label="ComicRandomFragment">
+            <action
+                android:id="@+id/comicRandom_to_comicHome"
+                app:destination="@id/comicHomeFragment"
+                app:popUpTo="@id/comicHomeFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/comicHomeFragment"
+            android:name="com.example.timekiller.view.comic.ComicHomeFragment"
+            android:label="ComicHomeFragment">
+            <action
+                android:id="@+id/comicHome_to_home"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/homeFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/comicHome_to_comicRandom"
+                app:destination="@id/comicRandomFragment" />
+            <action
+                android:id="@+id/comicHome_to_comicFav"
+                app:destination="@id/comicFavoriteFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/comicFavoriteFragment"
+            android:name="com.example.timekiller.view.comic.ComicFavoriteFragment"
+            android:label="ComicFavoriteFragment">
+            <action
+                android:id="@+id/comicFav_to_comicHome"
+                app:destination="@id/comicHomeFragment"
+                app:popUpTo="@id/comicHomeFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/comicFav_to_comicViewFav"
+                app:destination="@id/comicViewFavoriteFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/comicViewFavoriteFragment"
+            android:name="com.example.timekiller.view.comic.ComicViewFavoriteFragment"
+            android:label="ComicViewFavoriteFragment">
+            <action
+                android:id="@+id/comicViewFav_to_comicFav"
+                app:destination="@id/comicFavoriteFragment"
+                app:popUpTo="@id/comicFavoriteFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+    </navigation>
+
+</navigation>

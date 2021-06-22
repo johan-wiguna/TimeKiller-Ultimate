@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">TimeKiller Ultimate</string>
+    <string name="comic">Comic</string>
+    <string name="joke">Joke</string>
+    <string name="quiz">Quiz</string>
+    <string name="adviceEntity">Advice</string>
+    <string name="copyright">Copyright © 2020 JJWC Team</string>
+    <string name="timekiller">TimeKiller</string>
+    <string name="ultimate">Ultimate</string>
+
+<!--    GENERAL-->
+    <string name="no_connection">Cannot Connect To Internet</string>
+    <string name="conn_error">Connection Error</string>
+    <string name="emtpy_list">Ups… Nothing to show here</string>
+
+<!--    COMIC PAGE-->
+    <string name="tv_comic_welcome">Welcome to the comic section!</string>
+    <string name="tv_comic_intro">
+        In this section you will be given one comic at a time.
+        Just relax and enjoy the comic!
+    </string>
+    <string name="get_the_comic">GIVE ME THE COMIC!</string>
+    <string name="fav_comic">MY FAVOURITES</string>
+    <string name="make_fav_comic">FAVOURITE THIS</string>
+    <string name="next_comic">NEXT PLEASE</string>
+    <string name="fav_comics_title">FAVOURITE COMICS</string>
+
+
+<!--    QUIZ PAGE-->
+    <string name="quiz_welcome">Welcome to the quiz section!</string>
+    <string name="quiz_intro">
+        In this section you will be given one question at a time.
+        There are 2 types of question: True/False and Multiple Choice. For each question answered
+        correctly, you will get points depending on the difficulty level of the question.
+    </string>
+    <string name="start_the_quiz">START THE QUIZ!</string>
+    <string name="question">Question&#160;</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="score_label">Score:&#160;</string>
+    <string name="category_label">Category:&#160;</string>
+    <string name="difficulty_label">Difficulty:&#160;</string>
+    <string name="high_score_label">High Score:&#160;</string>
+    <string name="quiz_result">Quiz Result</string>
+    <string name="quiz_over">Quiz Over!</string>
+    <string name="your_high_score_label">Your high score:&#160;</string>
+    <string name="your_score_label">Your score:&#160;</string>
+    <string name="new_high_score">New High Score!</string>
+
+<!--    JOKE PAGE-->
+    <string name="tv_joke_welcome">Welcome to the joke section!</string>
+    <string name="tv_joke_intro">
+        In this section you will be given one joke at a time.
+        This jokes are sometimes gonna be funny or either just a joke. So get along
+        and be ready for.... The PUNCHLINE!
+    </string>
+    <string name="get_the_joke">GIVE ME THE JOKE!</string>
+    <string name="get_more_joke">MORE LAUGHTER PLEASE!</string>
+    <string name="dad_joke">Dad\'s jokes</string>
+    <string name="cn_joke">Chuck Norris\'s jokes</string>
+
+<!--    ADVICE PAGE-->
+    <string name="tv_advice_welcome">Welcome to the advice section!</string>
+    <string name="tv_advice_intro">
+        "He who has a why to live can bear almost any how".
+        The serenity of life shall be ours. Intelligence and wisdom should be
+        always gained every day. Now, it\'s time for naturally enhanced yourself.
+    </string>
+    <string name="get_the_advice">MAKE ME WISER!</string>
+    <string name="get_more_advice">BE WISER!</string>
+    <string name="fav_advice">FAVOURITE ADVICES</string>
+    <string name="make_fav_advice">FAVOURITE THIS</string>
+    <string name="swipe_hint">Swipe down to refresh</string>
+
+<!--    GENERAL-->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="unmake_fav_advice">UNFAVOURITE</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="mark_favorite">Marked as favorite</string>
+    <string name="unmark_favorite">Unmarked as favorite</string>
+    <string name="fav_advice_title">Favorite Advices</string>
+
+</resources>
